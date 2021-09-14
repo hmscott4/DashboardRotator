@@ -1,0 +1,77 @@
+/* FileName: dashboard.css 
+   Author: Hugh Scott
+   Date: 2020/03/26
+   
+   Description Stylesheet for dashboard rotation web page.
+*/
+.companylogo {
+	position:fixed;
+	top:0;
+	left:0;
+	width:15%;
+	height:15%;
+	overflow:hidden;
+	font-family: arial;
+	padding: 10px;
+	background-color: DimGray;
+}
+.clockbar {
+	position:fixed;
+	top:0;
+	left:15%;
+	width:85%;
+	height:15%;
+	overflow:hidden;
+	font-family: arial;
+	padding: 10px;
+	background-color: DimGray;
+	color: DarkGray
+}
+.clock {
+   font-family: arial;
+   padding: 5px;
+   color: DarkRed;
+   font-size: 24px;
+   font-weight: bold
+}
+.container {
+	position:fixed;
+	top:15%;
+	left:15%;
+	width:85%;
+	height:85%;
+	overflow:hidden;
+	font-family: arial;
+	background-color: DimGray;
+	display: inline-block;
+}
+.navpane {
+	font-family: arial;
+	position:fixed;
+	top:15%;
+	left:0;
+	width:15%;
+	height:90%;
+	overflow:scroll;
+	background-color: DimGray;
+	color: White;
+	padding: 10px;
+}	
+.navtable {
+	text-align: center;
+}
+.navItem {
+	text-align: left;
+	color: White
+}
+.slides {
+	max-height:100%;
+	max-width:100%;
+	margin:15px;
+}
+a:link {
+	color: white
+}
+a:visited {
+	color: DarkGray
+}

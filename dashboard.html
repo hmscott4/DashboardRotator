@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="refresh" content="21600">
+	<meta http-equiv="x-ua-compatible" content="IE=10,9" >	
+	<meta charset="UTF-8">
+	<script type='text/javascript' src='jquery-3.4.1.min.js'></script>
+	<title>Operations Dashboard</title>
+	<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+	<div id="logo" class="companylogo">
+		<img src=".\company_logo.jpg" alt="" height="45" />
+	</div>
+	<div id="clockItems" class="clockbar">
+		<!-- This section populated from JQuery (function LoadClocks()) based on dashboard.clocks.json file	-->
+	</div>
+	<div id="imgGallery" class="container">
+		<!-- This section populated from JQuery (function LoadImages()) based on dashboard.json file -->
+	</div>
+	<div class="navpane">
+		<table class="navtable">
+			<tr>
+				<td>
+					<button class="w3-button w3-display-left" onclick="plusDivs(-5)">&#10094;&#10094;</button>
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<span id="ImgCounter">0</span>
+					<span > of </span>
+					<span id="ImgTotal">0</span>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+5)">&#10095;&#10095;</button>
+				</td>
+			<tr>
+				<td align="left">
+					<button class="w3-button w3-pause" onclick="pause()">||</button>
+					<button class="w3-button w3-resume" onclick="resume()">&#10095;</button>
+					<span id="pauseFlag"></span>
+				</td>
+			<tr>
+			
+			</tr>
+		</table>
+		<h3>Dashboards</h3>
+		<span id="navItems" class="navItem">
+			<!-- This section populated from JQuery (function LoadImages()) based on dashboard.json file -->
+		</span>
+
+		<h3>Pinned</h3>
+		<span id="pinnedItems" class="navItem">
+			<!-- This section populated from JQuery (function LoadPinnedItems()) based on dashboard.json file -->
+		</span>		
+	</div>
+
+	<script type='text/javascript' src='dashboard.js'></script>
+
+</body>
+</html>

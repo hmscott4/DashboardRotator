@@ -1,0 +1,58 @@
+[{
+        "description": "Organization Summary",
+        "name": "Dashboard1",
+        "sequence": "1",
+        "src": ".\\img\\Dashboard1.jpeg",
+        "type": "Image",
+        "url": "https://reports.abcd.lcl/Reports/report/SCORE/Dash_OrganizationSummary"
+    }, {
+        "description": "Organization Summary By Area",
+        "name": "Dashboard2",
+        "sequence": "2",
+        "src": ".\\img\\Dashboard2.jpeg",
+        "type": "Image",
+        "url": "https://reports.abcd.lcl/Reports/report/SCORE/Dash_OrganizationSummaryByArea"
+    }, {
+        "description": "Organization Summary By Group",
+        "name": "Dashboard5",
+        "sequence": "3",
+        "src": ".\\img\\Dashboard5.jpeg",
+        "type": "Image",
+        "url": "https://reports.abcd.lcl/Reports/report/Score/Dash_OrganizationSummaryByGroup"
+    }, {
+        "description": "Alert Aging",
+        "name": "Dashboard4",
+        "sequence": "4",
+        "src": ".\\img\\Dashboard4.jpeg",
+        "type": "Image",
+        "url": "https://reports.abcd.lcl/Reports/report/SCORE/Dash_AlertAgingReport"
+    }, {
+        "description": "Host performance",
+        "name": "Dashboard3",
+        "sequence": "5",
+        "src": ".\\img\\Dashboard3.jpeg",
+        "type": "Image",
+        "url": ""
+    }, {
+        "description": "Database Performance",
+        "name": "Dashboard6",
+        "sequence": "6",
+        "src": ".\\img\\Dashboard6.jpeg",
+        "type": "Image",
+        "url": ""
+    }, {
+        "description": "COVID-19 Status",
+        "name": "Dashboard7",
+        "sequence": "7",
+        "src": "https://www.bing.com/covid",
+        "type": "Html",
+        "url": "https://www.bing.com/covid"
+    }, {
+        "description": "Organization Summary By Group",
+        "name": "Dashboard8",
+        "sequence": "8",
+        "src": "https://reports.abcd.lcl/Reportserver?/Score/Dash_OrganizationSummaryByGroup&rs:Command=Render&rc:Toolbar=false",
+        "type": "Html",
+        "url": "https://reports.abcd.lcl/Reports/report/Score/Dash_OrganizationSummaryByGroup"
+    }
+]

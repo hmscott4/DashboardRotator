@@ -1,0 +1,20 @@
+[{
+        "description": "Operations Manager",
+        "sequence": "1",
+        "src": "https://scom.abcd.lcl/OperationsManager",
+        "type": "Html",
+        "url": "https://scom.abcd.lcl/OperationsManager"
+    }, {
+        "description": "Report Manager",
+        "sequence": "2",
+        "src": "https://reports.abcd.lcl/Reports",
+        "type": "Html",
+        "url": "https://reports.abcd.lcl/Reports"
+    }, {
+        "description": "Power BI",
+        "sequence": "3",
+        "src": "https://pbirs.abcd.lcl/Reports",
+        "type": "Html",
+        "url": "https://pbirs.abcd.lcl/Reports"
+    }
+]

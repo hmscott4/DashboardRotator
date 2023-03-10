@@ -34,6 +34,38 @@ function resume() {
 
 }
 
+
+// function SortSequence
+// Sort data by sequence
+function SortSequence(a, b) {
+    if (a.sequence < b.sequence)
+        return -1;
+    if (a.sequence > b.sequence)
+        return 1;
+    return 0;
+}
+
+// function rankingSorter
+// Used to sort data by sequence
+function rankingSorter(firstKey, secondKey) {
+    return function(a, b) {  
+        if (a[firstKey] > b[firstKey]) {  
+            return -1;  
+        } else if (a[firstKey] < b[firstKey]) {  
+            return 1;  
+        }  
+        else {
+            if (a[secondKey] > b[secondKey]) {  
+                return 1;  
+            } else if (a[secondKey] < b[secondKey]) {  
+                return -1;  
+            } else {
+                return 0;
+            }
+        } 
+    }  
+}
+
 // Function LoadImages
 // Loads the dashboard images based on dashboard.json
 // Called on page load and called on setInterval schedule
@@ -48,12 +80,14 @@ function LoadImages() {
 
     // Part 1: Load images into imgGallery
         $.getJSON('dashboard.json', function (data) {
+			// console.log(data);
+			data.sort(SortSequence);
 
             $.each(data, function (key, val) {
                 if(val.type === "Image") {
-                    output += '<img class="slides" src="' + val.src + '" id="' + val.name + '" alt="' + val.description + '">';
+                    output += '<img class="slides" src="' + val.src + '" id="' + val.name + '" alt="' + val.description + '" loading="lazy">';
                 } else if (val.type === "Html") {
-                    output += '<object type="text/html" class="slides" data="' + val.src + '" style="width:100%;height:100%;margin:25px"></object>';
+                    output += '<embed title="' + val.name + '" type="text/html" class="slides" src="' + val.src + '" style="width:100%;height:100%" loading="lazy"></embed>';
                 };
             i+=1;
             });
@@ -81,6 +115,7 @@ function LoadNavItems() {
 
     $.getJSON('dashboard.json', function (data) {
         // console.log(data);
+		data.sort(SortSequence);
         output += '<ol type="1">';
 
         $.each(data, function (key, val) {
@@ -179,6 +214,8 @@ function updateClocks() {
     var l = clocks.length;
     var timezone;
     var time;
+	
+	// Sort the Clocks by sequence
 
     for (i = 0; i < l; i+=1) {
         timezone = clocks[i].dataset.timezone;
@@ -201,6 +238,7 @@ function LoadClocks() {
     // Loads the world clock bar based on entries in dashboard.clocks.json.
     $.getJSON('dashboard.clocks.json', function (data) {
         // console.log(data);
+		data.sort(SortSequence);
         var output = '<table style="width:100%"><tr>';
 
         $.each(data, function (key, val) {
@@ -217,10 +255,11 @@ function LoadClocks() {
         $('#clockItems').html(output);
 
     });
+	
 }
 
 // Initialize slideIndex, load clock items and images
-var slideIndex = 1;
+var slideIndex = 0;
 LoadClocks();
 LoadImages();
 
@@ -229,6 +268,7 @@ LoadNavItems();
 LoadPinnedItems();
 
 // Set intervals for functions to run
-setInterval(LoadImages, 60000); // Reload dashboard items every 300 seconds [this refreshes images in carousel]
+// Values in milliseconds (5000=5 seconds)
+setInterval(LoadImages, 900000); // Reload dashboard items every 900 seconds [this refreshes images in carousel]
 setInterval(updateClocks, 15000); // Update Clocks every 15 seconds
-setInterval(carousel, 8000); // Update slide carousel every 8 seconds [this advances carousel to next slide]
+setInterval(carousel, 30000); // Update slide carousel every 8 seconds [this advances carousel to next slide]

@@ -1,37 +1,38 @@
 [
-{
-  "name":"Pacific",
-  "timezone":"America/Los_Angeles",
-  "sequence":"1"
-},
-{
-  "name":"Mountain",
-  "timezone":"America/Denver",
-  "sequence":"2"
-},
-{
-  "name":"Central",
-  "timezone":"America/Chicago",
-  "sequence":"3"
-},
-{
-  "name":"Eastern",
-  "timezone":"America/New_York",
-  "sequence":"4"
-},
-{
-  "name":"Zulu",
-  "timezone":"Etc/GMT",
-  "sequence":"5"
-},
-{
-  "name":"Bahrain",
-  "timezone":"Asia/Riyadh",
-  "sequence":"6"
-},
-{
-  "name":"Tokyo",
-  "timezone":"Asia/Tokyo",
-  "sequence":"7"
-}
+
+	{
+	  "name":"Hawaii",
+	  "timezone":"Pacific/Honolulu",
+	  "sequence":"1"
+	},
+	{
+	  "name":"Pacific",
+	  "timezone":"America/Los_Angeles",
+	  "sequence":"2"
+	},
+	{
+	  "name":"Mountain",
+	  "timezone":"America/Denver",
+	  "sequence":"3"
+	},
+	{
+	  "name":"Central",
+	  "timezone":"America/Chicago",
+	  "sequence":"4"
+	},
+	{
+	  "name":"Eastern",
+	  "timezone":"America/New_York",
+	  "sequence":"5"
+	},
+	{
+	  "name":"Zulu",
+	  "timezone":"Etc/GMT",
+	  "sequence":"6"
+	},
+	{
+	  "name":"Bahrain",
+	  "timezone":"Asia/Riyadh",
+	  "sequence":"7"
+	}
 ]
